@@ -41,7 +41,7 @@ SCRAPEOPS_PROXY_SETTINGS = {'country': 'fr'}
 #USER_AGENT = "quotes (+http://www.yourdomain.com)"
 
 # Obey robots.txt rules
-ROBOTSTXT_OBEY = True
+ROBOTSTXT_OBEY = False
 
 # Configure maximum concurrent requests performed by Scrapy (default: 16)
 CONCURRENT_REQUESTS = 1
