@@ -1,2 +1,4 @@
 quotes/config.env
 quotes/data/*
+quotes/__pycache__/
+quotes/spiders/__pycache__/
