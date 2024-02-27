@@ -10,4 +10,9 @@ from itemadapter import ItemAdapter
 
 class QuotesPipeline:
     def process_item(self, item, spider):
+        adapter = ItemAdapter(item)
+
+        value = adapter.get("goodreads_link")
+        value = "https://www.goodreads.com" + value
+        adapter["goodreads_link"] = value
         return item
