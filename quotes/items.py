@@ -11,3 +11,4 @@ class QuotesItem(scrapy.Item):
     author = scrapy.Field()
     quote = scrapy.Field()
     tags = scrapy.Field()
+    goodread_link = scrapy.Field()
