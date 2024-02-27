@@ -17,9 +17,10 @@ class QuotesZpiderSpider(scrapy.Spider):
             quotes_item["tags"] = quote["tags"]
             quotes_item["quote"] = quote["text"]
             quotes_item["goodreads_link"] = quote["author"]["goodreads_link"]
-        
+            yield quotes_item
+
         if data["has_next"]:
             next_page_number = data["page"] + 1
-            yield response.follow(self.api_url.format(next_page_number), callback= self.parse)
+            yield scrapy.Request(self.api_url.format(next_page_number), callback= self.parse)
         
-        yield quotes_item
+        
