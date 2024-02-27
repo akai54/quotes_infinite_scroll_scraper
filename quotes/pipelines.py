@@ -15,4 +15,8 @@ class QuotesPipeline:
         value = adapter.get("goodreads_link")
         value = "https://www.goodreads.com" + value
         adapter["goodreads_link"] = value
+
+        value = adapter.get("quote")
+        value = value.replace("“", "")
+        adapter["quote"] = value
         return item
